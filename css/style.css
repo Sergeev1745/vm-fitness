@@ -40,6 +40,9 @@ h2{
 	background: url('../img/main.png') 50% 0 no-repeat;
 	
 }
+.2nd-section{
+	background: #fff;
+}
 .container{
 	width: 1200px;
 	margin: 0 auto;
@@ -179,15 +182,17 @@ background: rgba(12, 11, 11, 0.78) url('../img/drive.png') 0 112px  repeat-x;
 	border-radius: 27px;
 	
 }
-.main-wrapper > .container{
-	width: 1200px;
-	margin: 0 auto;
-}
-.2nd-section{
+
+
+#block2{
 	background: #000;
+
 }
-
-
+#block2 h1{
+	font-family: "tacticsansexd-blkititalic";
+	font-size: 44px;
+	text-align: center;
+}
 
 
 @media  (max-width: 960px){
