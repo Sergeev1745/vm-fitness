@@ -1,0 +1,206 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {	
+	font-family: 'brutal', sans-serif;
+}
+.clearfix:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.main-wrapper{
+	background: #ebebeb;
+}
+p{
+	
+	overflow: hidden;  
+    text-overflow: clip;
+    font-size: 16px;
+    
+}
+h1{
+	font-size: 50px;
+	color: #fff;
+	font-family: "Tactic Sans Exd";
+}
+h3{
+	font-size: 20px;
+	font-weight:100;
+	font-family: "Tactic Sans";
+}
+h2{
+	font-size: 24px;
+	color: #fe5722;
+}
+.first-bg {
+	width: 100%;
+	min-height: 700px;	
+	background: url('../img/main.png') 50% 0 no-repeat;
+	
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.logo{
+	float: left;	
+	width: 150px;
+	height: 41px;
+	margin-top: 6px;
+	background: url('../img/logo.png');	
+}
+.header{
+	padding-top: 32px;
+	width: 100%;
+	margin-bottom: 
+
+}
+.nav {
+	float: right;
+	margin-top: 19px;
+}
+.nav li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 51px;
+	
+
+}
+.nav a{
+	display: block;
+	opacity: 0.58;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 1px solid #fff;
+	color: white;
+	font-family: "Brutal Type medium";
+	font-weight: bold;
+	font-size: 16px;
+	padding-bottom: 7px;
+
+}
+.nav a:hover{
+	opacity: 1;
+}
+.call-b-btn{
+	text-transform: uppercase;
+	float: right;
+	font-family: "Brutal Type";
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 55px;
+	padding:0 35px;
+	border: 2px solid #f1582d;
+	border-radius: 4px;
+	color: #fff;
+	background: none;
+}
+
+.call-b-btn:hover{
+	background: #f1582d;
+	transition: ease-out 0.2s;
+	cursor: pointer;
+}
+.description{
+	margin-top: 95px;
+	display: block;
+	width: 520px;
+	font-family: "Tactic Sans thn";
+}
+.trainer-name{
+	float: right;
+
+width: 236px;
+height: 38px;
+text-shadow: 0 0 17.6px rgba(255, 255, 255, 0.92);
+color: #fff;
+font-family: "tacticsans-thnititalic";
+font-size: 18px;
+}
+.form{
+margin: 63px 0 0 47px;
+padding: 0 20px;
+width: 360px;
+height: 400px;
+
+border-radius: 10px;
+box-shadow: -1.5px 5.8px 44.2px 3.8px rgba(0, 0, 0, 0.64);
+text-align: center;
+background: rgba(12, 11, 11, 0.78) url('../img/drive.png') 0 112px  repeat-x;
+}
+.form h3{
+	color: #fe5722;
+	padding: 32px 15px 21px;
+	font-family: "tacticsans-lgtititalic";
+}
+.form p{
+	opacity: 0.8;
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Brutal Type';
+	padding-bottom: 17px;
+}
+.form input{
+	margin-top: 15px;
+	width: 247px;
+	padding-left: 53px;
+	line-height: 55px;
+	background: none;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 5px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 16px;
+}
+.form input:focus{
+	outline-color: #fe5722;
+}
+.form input[type="text"]{
+	background: url('../img/user-icon.png') 16px 50% no-repeat;
+}
+.form input[type="tel"]{
+	background: url('../img/phone-icon.png') 16px 50% no-repeat;
+}
+.btn{
+	font-family: "Brutal Type medium";
+	border: 0;
+	color: #fff;
+	background-color: #fe5722;
+	box-shadow: -1.5px 5.8px 12px 1px rgba(0, 0, 0, 0.31), -0.2px 1px 36.8px 3.2px rgba(241, 88, 45, 0.46);
+}
+.form button{
+	
+	font-size: 16px;
+	line-height: 55px;
+	padding: 0 61px;
+	margin-top: 24px;
+	border-radius: 27px;
+	
+}
+.main-wrapper > .container{
+	width: 1200px;
+	margin: 0 auto;
+}
+.2nd-section{
+	background: #000;
+}
+
+
+
+
+@media  (max-width: 960px){
+	}
+@media (max-width: 768px){
+	
+	
+}
+@media(max-width: 480px){
+	
+	
+}
+@media(max-width: 320px){
+	
+}
+

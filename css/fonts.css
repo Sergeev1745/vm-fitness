@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Brutal Type';
+    src: url('../fonts/brutaltype-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brutal_typeblack';
+    src: url('../fonts/brutaltype-black-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Brutal Type';
+    src: url('../fonts/brutaltype-bold-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brutal_typeextra_bold';
+    src: url('../fonts/brutaltype-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brutal_typeextra_light';
+    src: url('../fonts/brutaltype-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brutal_typelight';
+    src: url('../fonts/brutaltype-light-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Brutal Type medium';
+    src: url('../fonts/brutaltype-medium-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brutal_typethin';
+    src: url('../fonts/brutaltype-thin-webfont.woff2') format('woff2'),
+         url('../fonts/brutaltype-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Tactic Sans Exd';
+    src: url('../fonts/tacticsansextexd-reg-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansextexd-reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/tacticsans-reg-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsans-reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Tactic Sans Exd-lgt';
+    src: url('../fonts/tacticsansexd-lgt-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansexd-lgt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Tactic Sans thn';
+    src: url('../fonts/tacticsansexd-thn-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansexd-thn-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tacticsansexd-thnititalic';
+    src: url('../fonts/tacticsansexd-thnit-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansexd-thnit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tacticsans-thnregular';
+    src: url('../fonts/tacticsans-thn-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsans-thn-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tacticsans-thnititalic';
+    src: url('../fonts/tacticsans-thnit-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsans-thnit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tacticsans-lgtititalic';
+    src: url('../fonts/tacticsans-lgtit-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsans-lgtit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tacticsansexd-blkititalic';
+    src: url('../fonts/tacticsansexd-blkit-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansexd-blkit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
