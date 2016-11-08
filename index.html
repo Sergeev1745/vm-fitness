@@ -5,27 +5,32 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/style.css">        
         <link rel="stylesheet" href="css/fonts.css">
-        
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7IoIkpHDb7rKXjt1SIyPE51NJ92GOZ7I"></script>
+        <script type="text/javascript" src="js/jquery.googlemap.js"></script>        
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/jcarousel.js"></script>
         <title>VM Fitness</title>
 	</head>
     <body>
     <div class="main-wrapper">
         <div class="first-bg">
-            <div class="container 1st-section clearfix">
+            <div class="container 1st-section first-style clearfix">
                 <div class="header clearfix">
-                    <div class="logo"></div> 
-                    <button class="call-b-btn">ЗАКАЗАТЬ ЗВОНОК</button>   
+                    <img src="img/logo.png" class="logo"></img> 
+                    <div class="menu-btn">Меню</div>
+                    <a class="call-b-btn  go_to" href="#block5">ЗАКАЗАТЬ ЗВОНОК</a>   
                     <ul class="nav">
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Прайс-лист</a></li>
-                        <li><a href="#">Наши результаты</a></li>
-                        <li><a href="#">Связаться</a></li>
+                        <li><a class="go_to" href="#block2">Услуги</a></li>
+                        <li><a class="go_to" href="#block3">Прайс-лист</a></li>
+                        <li><a class="go_to" href="#block4">Наши результаты</a></li>
+                        <li><a class="go_to" href="#block5">Связаться</a></li>
                     </ul> 
                 </div>
                 <h1 class="description">Персональный  фитнес-тренер</h1>
                 <h3 class="trainer-name">Верижников Михаил Александрович</h3>
                 <form action="#" class="form">
-                    <h3>Хочешь быть в <br> идеальной форме?</h3>
+                    <h2>Хочешь быть в <br> идеальной форме?</h2>
                     <p>Тренировки проходят в фитнес центре REPUBLICA на ул. Академика Курчатова д. стр.78</p>
                     <input type="text"  placeholder="Введите ваше имя">
                     <input type="tel" placeholder="Номер телефона">
@@ -35,23 +40,184 @@
             </div>
             
         </div>
-        <div class="container clearfix" id="block2">
+        <div class="container clearfix second-style" id="block2">
                 
              <h1 class="2nd-title">УСЛУГИ</h1>
              <div class="products-block">
-                <div class="product">
+                <div class="product clearfix">
                     <img src="img/1st-product.jpg" alt="">
                     <div class="product-description">
                         <h3>Персональная тренировка</h3>
                         <p>Имеется вариант рассрочки, а так же скидки на блоки при покупке более 9 занятий.</p>
-                        <span>Входит в стоимость тренировки</span>
-                        <button class="btn">ЗАКАЗАТЬ</button>
+                        <h4 class="price">2500 <sup>руб.</sup> <span>/ 60 мин</span></h4>                        
+                        <a href="#block5" class="btn go_to">ЗАПИСАТЬСЯ</a>
                     </div>
+
+                </div>
+                <div class="product clearfix">
+                    <img src="img/2nd-product.jpg" alt="">
+                    <div class="product-description">
+                        <h3>Консультации по спортивному питанию</h3>
+                        <p>Скидка до 10% на спортивное питание </p>
+                        <h4>Входит в стоимость тренировки</h4>                        
+                        <a href="#block5" class="btn go_to">СВЯЗАТЬСЯ</a>
+                    </div>
+                    
+                </div>
+                <div class="product clearfix">
+                    <img src="img/3nd-product.jpg" alt="">
+                    <div class="product-description">
+                        <h3>ПРОГРАММА ПИТАНИЯ</h3>
+                        <p>Информационная связь с потребителем, согласно Ф.Котлеру, поддерживает эмпирический конкурент.</p>
+                        <h4>Входит в стоимость тренировки</h4>                        
+                        <a href="#block5" class="btn go_to">ЗАКАЗАТЬ</a>
+                    </div>
+                    
+                </div>
+                <div class="product clearfix">
+                    <img src="img/4th-product.jpg" alt="">
+                    <div class="product-description">
+                        <h3>Персональная тренировка</h3>
+                        <p>Мониторинг активности, как следует из вышесказанного, транслирует потребительский рынок.</p>
+                        <h4>Входит в стоимость тренировки</h4>                        
+                        <a href="#block5" class="btn go_to">ЗАКАЗАТЬ</a>
+                    </div>
+                    
                 </div>
             </div>   
                 
             </div>
-      </div>  
+            <div class="third-bg">
+            <div class="container clearfix first-style" id="block3">
+                <h1>Прайс-лист</h1>
+                <div class="row clearfix">
+                    <p>Гостевой визит и первая тренировка</p>
+                    <div class="prices">
+                        <h3>бесплатно</h3>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <p>Стоимость одной тренировки</p>
+                    <div class="prices">
+                        <h3>2500<sup> руб / час</sup></h3>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <p>Абонемент на безлимитное кол-во тренировок</p>
+                    <div class="prices">
+                        <h3> 25000<sup> руб / месяц</sup></h3>
+                    </div>
+                </div>
+                
+                <p class="qualification">Стоимость абонемента фитнес клуба не входит в данный прайс. Возможны скидки на абонемент фитнес клуба REPUBLICA.</p>
+                <div class="block3-form">
+                <form action="" class="call-to-action">
+                    <h2>Если вы подадите заявку <span>до конца октября</span>, стоимость <span>10 занятий</span> составляет <span>20 000 <sup> руб.</sup></span></h2>
+                    <a href="#block5" class="btn go_to">ПОДАТЬ ЗАЯВКУ</a>
+                </form>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="fourth-bg">
+        <div class="container clearfix second-style" id="block4">
+            <h1>НАШИ РЕЗУЛЬТАТЫ</h1>
+            <a class="left-arrow arow" id="prev"></a>
+            <a class="right-arrow arow" id="next"></a>
+            <div id="slider">
+            <div class="slide active">
+            <div class="client-wrapper">
+                <div class="rewiev client-block">
+                    <img src="img/client-pic.png" alt="" class="client-pic">
+                    <h4>Констатинопольский<br>Константин Александрович</h4>
+                    <div class="sb-bar">
+                    <span>31 год</span>                    
+                    <a class="social-icon network1" href=""></a>
+                    <a class="social-icon network2" href=""></a>
+                    <a class="social-icon network3" href=""></a>
+                    <a class="social-icon network4" href=""></a>
+                    </div>
+                    <p>Закон исключённого третьего реально создает примитивный смысл жизни. Единственной космической субстанцией Гумбольдт считал материю, наделенную внутренней активностью, несмотря на это суждение порождает и обеспечивает типичный гедонизм, ломая рамки привычных представлений. Аджива, по определению, рефлектирует дедуктивный метод. Интеллект, как следует из вышесказанного, раскладывает на элементы интеллигибельный гравитационный парадокс. Отношение к современности, конечно, непредсказуемо. Наряду с этим философия контролирует сложный знак.</p>
+                </div>
+                <div class="results client-block">                    
+                    <img src="img/bw-logo.png" alt="" class="logo-bw">
+                    <div class="controls">
+                        <div class="flex-between">
+                        <a href="img/results-pic.jpg" class="before">ДО</a>
+                        <a href="img/results-pic.jpg" class="compare">СРАВНИТЬ</a>
+                        <a href="img/results-pic.jpg" class="after">ПОСЛЕ</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+                    <div class="slide">
+
+                <div class="client-wrapper">
+                
+                <div class="rewiev client-block">
+                    <img src="img/client-pic.png" alt="" class="client-pic">
+                    <h4>Констатинопольский<br>Константин Александрович</h4>
+                    <div class="sb-bar">
+                    <span>31 год</span>                    
+                    <a class="social-icon network1" href=""></a>
+                    <a class="social-icon network2" href=""></a>
+                    <a class="social-icon network3" href=""></a>
+                    <a class="social-icon network4" href=""></a>
+                    </div>
+                    <p>Закон исключённого третьего реально создает примитивный смысл жизни. Единственной космической субстанцией Гумбольдт считал материю, наделенную внутренней активностью, несмотря на это суждение порождает и обеспечивает типичный гедонизм, ломая рамки привычных представлений. Аджива, по определению, рефлектирует дедуктивный метод. Интеллект, как следует из вышесказанного, раскладывает на элементы интеллигибельный гравитационный парадокс. Отношение к современности, конечно, непредсказуемо. Наряду с этим философия контролирует сложный знак.</p>
+                </div>
+                <div class="results client-block">                    
+                    <img src="img/bw-logo.png" alt="" class="logo-bw">
+                    <div class="controls">
+                        <div class="flex-between">
+                        <a href="img/results-pic.jpg" class="before">ДО</a>
+                        <a href="img/results-pic.jpg" class="compare">СРАВНИТЬ</a>
+                        <a href="img/results-pic.jpg" class="after">ПОСЛЕ</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            </div> <!-- slider end -->
+
+        </div>
+        </div>
+        <div class="map">
+        <div id="map"></div>
+
+        <div class="container clearfix first-style" id="block5">
+            <form action="#" class="form">
+                    <h2>Свяжитесь со мной для индвидуального расчета ваших тренировок</h2>
+                    <input type="text"  placeholder="Введите ваше имя">
+                    <input type="tel" placeholder="Номер телефона">
+                    <button class="btn"> СВЯЗАТЬСЯ</button>
+                </form>
+
+        </div>
+        </div>
+        </div>
+      </div>
+        <footer>
+            <div class="container footer-wrapper clearfix">
+            <img src="img/logo.png" class="logo"></img>
+                    <div class="menu-btn">Меню</div>
+                    <button class="call-b-btn">ЗАКАЗАТЬ ЗВОНОК</button>   
+                    <ul class="nav">
+                        <li><a class="go_to" href="#block2">Услуги</a></li>
+                        <li><a class="go_to" href="#block3">Прайс-лист</a></li>
+                        <li><a class="go_to" href="#block4">Наши результаты</a></li>
+                        <li><a class="go_to" href="#block5">Связаться</a></li>
+                    </ul> 
+                </div>
+            </div>
+            
+        </footer>  
     </body>
 	
 </html>

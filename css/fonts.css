@@ -198,3 +198,23 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'tacticsansexd-bldititalic';
+    src: url('../fonts/tacticsansexd-bldit-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansexd-bldit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tacticsansexd-medititalic';
+    src: url('../fonts/tacticsansexd-medit-webfont.woff2') format('woff2'),
+         url('../fonts/tacticsansexd-medit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
