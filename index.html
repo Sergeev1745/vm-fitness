@@ -7,9 +7,11 @@
         <link rel="stylesheet" href="css/fonts.css">
         <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7IoIkpHDb7rKXjt1SIyPE51NJ92GOZ7I"></script>
-        <script type="text/javascript" src="js/jquery.googlemap.js"></script>        
+        <script type="text/javascript" src="js/jquery.googlemap.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>        
         <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/jcarousel.js"></script>
+        
         <title>VM Fitness</title>
 	</head>
     <body>
@@ -34,7 +36,7 @@
                     <p>Тренировки проходят в фитнес центре REPUBLICA на ул. Академика Курчатова д. стр.78</p>
                     <input type="text"  placeholder="Введите ваше имя">
                     <input type="tel" placeholder="Номер телефона">
-                    <button class="btn"> КОНЕЧНО!</button>
+                    <button class="btn  btn-ripple js-ripple"> КОНЕЧНО!</button>
                 </form>
 
             </div>
@@ -50,7 +52,7 @@
                         <h3>Персональная тренировка</h3>
                         <p>Имеется вариант рассрочки, а так же скидки на блоки при покупке более 9 занятий.</p>
                         <h4 class="price">2500 <sup>руб.</sup> <span>/ 60 мин</span></h4>                        
-                        <a href="#block5" class="btn go_to">ЗАПИСАТЬСЯ</a>
+                        <a href="#block5" class="btn  btn-ripple js-ripple go_to">ЗАПИСАТЬСЯ</a>
                     </div>
 
                 </div>
@@ -60,7 +62,7 @@
                         <h3>Консультации по спортивному питанию</h3>
                         <p>Скидка до 10% на спортивное питание </p>
                         <h4>Входит в стоимость тренировки</h4>                        
-                        <a href="#block5" class="btn go_to">СВЯЗАТЬСЯ</a>
+                        <a href="#block5" class="btn  btn-ripple js-ripple go_to">СВЯЗАТЬСЯ</a>
                     </div>
                     
                 </div>
@@ -70,7 +72,7 @@
                         <h3>ПРОГРАММА ПИТАНИЯ</h3>
                         <p>Информационная связь с потребителем, согласно Ф.Котлеру, поддерживает эмпирический конкурент.</p>
                         <h4>Входит в стоимость тренировки</h4>                        
-                        <a href="#block5" class="btn go_to">ЗАКАЗАТЬ</a>
+                        <a href="#block5" class="btn  btn-ripple js-ripple go_to">ЗАКАЗАТЬ</a>
                     </div>
                     
                 </div>
@@ -80,7 +82,7 @@
                         <h3>Персональная тренировка</h3>
                         <p>Мониторинг активности, как следует из вышесказанного, транслирует потребительский рынок.</p>
                         <h4>Входит в стоимость тренировки</h4>                        
-                        <a href="#block5" class="btn go_to">ЗАКАЗАТЬ</a>
+                        <a href="#block5" class="btn  btn-ripple js-ripple go_to">ЗАКАЗАТЬ</a>
                     </div>
                     
                 </div>
@@ -113,7 +115,7 @@
                 <div class="block3-form">
                 <form action="" class="call-to-action">
                     <h2>Если вы подадите заявку <span>до конца октября</span>, стоимость <span>10 занятий</span> составляет <span>20 000 <sup> руб.</sup></span></h2>
-                    <a href="#block5" class="btn go_to">ПОДАТЬ ЗАЯВКУ</a>
+                    <a href="#block5" class="btn  btn-ripple js-ripple go_to">ПОДАТЬ ЗАЯВКУ</a>
                 </form>
                 </div>
 
@@ -140,13 +142,18 @@
                     </div>
                     <p>Закон исключённого третьего реально создает примитивный смысл жизни. Единственной космической субстанцией Гумбольдт считал материю, наделенную внутренней активностью, несмотря на это суждение порождает и обеспечивает типичный гедонизм, ломая рамки привычных представлений. Аджива, по определению, рефлектирует дедуктивный метод. Интеллект, как следует из вышесказанного, раскладывает на элементы интеллигибельный гравитационный парадокс. Отношение к современности, конечно, непредсказуемо. Наряду с этим философия контролирует сложный знак.</p>
                 </div>
-                <div class="results client-block">                    
+                <div class="results client-block" >                    
                     <img src="img/bw-logo.png" alt="" class="logo-bw">
+                    <div class ="before-after">
+                    <div class="view view-after"><img src="img/results-pic.jpg" /></div>
+                    <div class="view view-before"><img src="img/results-pic.jpg" /></div>
+                    <div class= "dragme"></div>
+                    </div>
                     <div class="controls">
-                        <div class="flex-between">
-                        <a href="img/results-pic.jpg" class="before">ДО</a>
-                        <a href="img/results-pic.jpg" class="compare">СРАВНИТЬ</a>
-                        <a href="img/results-pic.jpg" class="after">ПОСЛЕ</a>
+                        <div class="flex-between" id="controls">
+                        <a href="#" class="to-start">ДО</a>
+                        <a href="#" class="to-middle">СРАВНИТЬ</a>
+                        <a href="#" class="to-end">ПОСЛЕ</a>
                         </div>
                     </div>
 
@@ -170,13 +177,18 @@
                     </div>
                     <p>Закон исключённого третьего реально создает примитивный смысл жизни. Единственной космической субстанцией Гумбольдт считал материю, наделенную внутренней активностью, несмотря на это суждение порождает и обеспечивает типичный гедонизм, ломая рамки привычных представлений. Аджива, по определению, рефлектирует дедуктивный метод. Интеллект, как следует из вышесказанного, раскладывает на элементы интеллигибельный гравитационный парадокс. Отношение к современности, конечно, непредсказуемо. Наряду с этим философия контролирует сложный знак.</p>
                 </div>
-                <div class="results client-block">                    
+                <div class="results client-block" >                    
                     <img src="img/bw-logo.png" alt="" class="logo-bw">
+                    <div class="before-after">
+                    <div class="view view-after"><img src="img/results-pic.jpg" /></div>
+                    <div class="view view-before"><img src="img/results-pic.jpg" /></div>
+                    <div class="dragme"></div>
+                    </div>
                     <div class="controls">
-                        <div class="flex-between">
-                        <a href="img/results-pic.jpg" class="before">ДО</a>
-                        <a href="img/results-pic.jpg" class="compare">СРАВНИТЬ</a>
-                        <a href="img/results-pic.jpg" class="after">ПОСЛЕ</a>
+                        <div class="flex-between" id="controls">
+                        <a href="#" class="to-start">ДО</a>
+                        <a href="#" class="to-middle">СРАВНИТЬ</a>
+                        <a href="#" class="to-end">ПОСЛЕ</a>
                         </div>
                     </div>
 
@@ -196,7 +208,7 @@
                     <h2>Свяжитесь со мной для индвидуального расчета ваших тренировок</h2>
                     <input type="text"  placeholder="Введите ваше имя">
                     <input type="tel" placeholder="Номер телефона">
-                    <button class="btn"> СВЯЗАТЬСЯ</button>
+                    <button class="btn  btn-ripple js-ripple"> СВЯЗАТЬСЯ</button>
                 </form>
 
         </div>

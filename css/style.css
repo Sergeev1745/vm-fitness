@@ -73,9 +73,14 @@ footer{
 .header{
 	padding-top: 32px;
 	width: 100%;
-	 
-
+	position: relative;
+	z-index: 1;
 }
+.footer-wrapper{
+	position: relative;
+	z-index: 100;
+}
+
 .menu-btn{
 	display: none;
 }
@@ -87,29 +92,71 @@ footer{
 	list-style: none;
 	display: inline-block;
 	margin-right: 51px;
+	position: relative;
 	
 
 }
 .nav a{
+	position: relative;
 	display: block;
 	opacity: 0.58;
 	text-decoration: none;
-	text-transform: uppercase;
-	border-bottom: 1px solid #fff;
+	text-transform: uppercase;	
 	color: white;
 	font-family: "Brutal Type medium";
 	font-weight: bold;
 	font-size: 16px;
-	padding-bottom: 7px;
+  color: white;
+  padding-bottom: 7px;
 
 }
-.nav a:hover{
-	opacity: 1;
+.nav a:before{
+ content:'';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 0%;
+    background: white;
+    z-index: 1000;
+    transition: all .3s ease;
+  }
+.nav a:hover:before{
+    width: 100%;
 }
+
+.footer-wrapper a{
+	position: relative;
+	padding-bottom: 5px;
+}
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+	user-drag: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+	
+	.ink {
+		display: block;
+		position: absolute;
+		background: white;
+		opacity: 0.8;
+		border-radius: 100%;
+		will-change: transform;
+		transform: scale(0); 
+		
+	}
+	.is-animating {
+			animation: ripple 0.4s linear; 
+		}
+		
 .call-b-btn{
 	text-transform: uppercase;
+	position: relative;
 	float: right;
 	font-family: "Brutal Type";
+	background: none;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 55px;
@@ -117,16 +164,32 @@ footer{
 	border: 2px solid #f1582d;
 	border-radius: 4px;
 	color: #fff;
-	background: none;
 	text-decoration: none;
 
 }
 
-.call-b-btn:hover{
+.call-b-btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
 	background: #f1582d;
-	transition: ease-out 0.2s;
-	
 }
+
+
+.call-b-btn:hover:after,
+.call-b-btn:active:after {
+	width: 100%;
+}
+
+
+
 
 .description{
 	margin-top: 95px;
@@ -194,10 +257,7 @@ background: rgba(12, 11, 11, 0.78) url('../img/drive.png') 0 112px  repeat-x;
 	background-color: #fe5722;
 	box-shadow: -1.5px 5.8px 12px 1px rgba(0, 0, 0, 0.31), -0.2px 1px 36.8px 3.2px rgba(241, 88, 45, 0.46);
 }
-.btn:hover{
-	background-color: #dd3c09;
 
-}
 .form button{
 	
 	font-size: 16px;
@@ -229,11 +289,18 @@ background: rgba(12, 11, 11, 0.78) url('../img/drive.png') 0 112px  repeat-x;
 	width: 48%;
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: -1.5px 5.8px 6px rgba(0, 0, 0, 0.04);
 	margin-bottom: 24px;
-	
-
+	transition:all 250ms;
+  	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.12);
 }
+.product:hover,.product:focus {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 6px 6px rgba(0,0,0,0.12);
+    transform:translateY(-5px);
+  }
+.product:active {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.12);
+    transform:translateY(-2px);
+  }
 .product img {
 	width: 34%;
 	height: 290px;
@@ -316,7 +383,23 @@ background: rgba(12, 11, 11, 0.78) url('../img/drive.png') 0 112px  repeat-x;
 	width: 100%;
 	height: 54px;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+	position: relative;
 }
+
+.row:hover:before{
+    width: 100%;
+}
+.row:before{
+ content:'';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    transition: all .8s ease;
+  }
 .row p{
 	color: #fff;
 	font-size: 18px;
@@ -414,17 +497,55 @@ box-shadow: -1.5px 5.8px 44.2px 3.8px rgba(0, 0, 0, 0.64);
 	
 }
 .rewiev{
-	padding:24px 45px 0 34px;
+	padding: 0 45px 0 34px;
 	box-sizing: border-box;
 	position: relative;
 	background: #fff url('../img/divider.png') 0 118px repeat-x;
 }
 .results{
-	background: #fff url('../img/results-pic.jpg') 50% 50% no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	
 }
+.before-after{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.view{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      
+    }
+     .view img{
+     	height: 100%;
+     	
+     	
+     	
+     }   
+      .view-before{
+        z-index: 100;
+      }
+        
+      .view-after{
+        z-index: 200;
+      }
+      
+      .dragme{
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background: #fe5722;
+        cursor: pointer;
+        z-index: 300;
+      }
 .rewiev h4 {
+	padding-top: 10px;
 	padding-left: 138px;
 	font-size: 18px;
 	color: #3e3c3c;
@@ -482,6 +603,7 @@ box-shadow: -1.5px 5.8px 44.2px 3.8px rgba(0, 0, 0, 0.64);
 	position: absolute;
 	top: 55px;
 	right: 35px;
+	z-index: 0;
 }
 .controls{
 	position: absolute;
@@ -500,7 +622,7 @@ box-shadow: -1.5px 5.8px 44.2px 3.8px rgba(0, 0, 0, 0.64);
 .controls a{
 	display: inline-block;
 	padding-bottom: 6px;	
-	border-bottom: 1px solid rgba(35, 35, 35, 0.2);
+	position: relative;
 	color: #232323;
 	font-family: "Brutal Type medium";
 	font-size: 16px;
@@ -510,8 +632,24 @@ box-shadow: -1.5px 5.8px 44.2px 3.8px rgba(0, 0, 0, 0.64);
 }
 .controls a:hover {
 	color: #fe5722;
-	border-bottom: 1px solid #fe5722;
+	transition: all .3s ease;
 }
+
+.controls a:before{
+ content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background: #fe5722;
+    z-index: 1000;
+    transition: all .3s ease;
+  }
+.controls a:hover:before{
+    width: 100%;
+}
+
 #block4 .arow{
 	position: absolute;
 	top: 40%;
@@ -723,7 +861,7 @@ margin-top: 60px;
 	
 }
 .rewiev{
-	padding: 15px 34px 0 34px;
+	padding: 0 34px 0 34px;
 	background: #fff url('../img/divider.png') 0 118px repeat-x;
 	-webkit-background-size: 80%;
 	background-size: 80%;
@@ -1341,4 +1479,14 @@ footer{
 	margin: 0 auto;
 }
 }
+@keyframes ripple {
+  0% {
+    // opacity: 0.8;
+    // transform: scale(0); 
+  }
 
+  100% {
+    opacity: 0;
+    transform: scale(1.5); 
+  } 
+}

@@ -59,7 +59,93 @@ $( document ).ready(function() {
      	$(this).siblings(".nav").hide()
      });
 
-     
+var endWidth = $(".before-after").width() - 2;
+var middleWidth = $(".before-after").width() / 2 - 2;
+
+
+var clblh = $(".results").width() / '1.14';
+$(".client-block").height(clblh);
+
+
+
+     // dragable
+     var dragMe         = $(".dragme");
+  var beforeAfter    = $(".before-after");
+  var viewAfter      = $(".view-after");
+        
+  Draggable.create(dragMe, {
+    type:"left",
+    bounds: beforeAfter,
+    onDrag:updateImages
+  });
+                  
+  function updateImages(){
+    TweenLite.set(viewAfter, {width: dragMe.css("left") });   //or this.x if only dragging
+  }
+         
+  //Intro Animation
+  animateTo(middleWidth);
+         
+  //Externall nav
+  $(".to-start").on("click", function(){
+    animateTo(0);
+  });
+         
+  $(".to-middle").on("click", function(){
+    animateTo(middleWidth);  
+  });
+         
+  $(".to-end").on("click", function(){
+    animateTo(endWidth);
+  });
+         
+  function animateTo(_left){
+    TweenLite.to( dragMe, 1, {left: _left, onUpdate: updateImages });
+  }
+  
+  //V2 Click added
+  beforeAfter.on("click", function(event){           
+    var eventLeft = event.clientX - beforeAfter.offset().left;
+    animateTo(eventLeft);
+  });
     
 
 });
+document.addEventListener('click', function(event) {
+    
+        if (!event.target.classList.contains('js-ripple')) {
+            return;
+        }
+        
+        var rippleBtn = event.target, 
+        ink = rippleBtn.querySelector('.ink'), diameter;
+    
+        if (!ink) {
+            // first time clicked => create a new ink element
+            ink = document.createElement('i');
+            ink.classList.add('ink');
+            
+            diameter = Math.max(rippleBtn.clientWidth, rippleBtn.clientHeight);
+            ink.style.width = diameter + 'px';
+            ink.style.height = diameter + 'px';
+            
+            // when the animation ends remove el (bind for all vendor prefixes)
+            ['animationend', 'webkitAnimationEnd', 'oAnimationEnd', 'MSAnimationEnd'].forEach(function(eventName){
+                ink.addEventListener(eventName, function(){
+                    ink.parentNode.removeChild(ink)
+                });
+            });
+
+            rippleBtn.insertBefore(ink, rippleBtn.firstChild);
+        } else {
+            diameter = ink.clientWidth;
+        }
+        
+        // calculate the click center
+    ink.style.top = (event.offsetY - diameter/2) + 'px';
+    ink.style.left = (event.offsetX - diameter/2) + 'px';
+        
+        ink.classList.remove('is-animating');
+        ink.width = ink.clientWidth + 'px';
+        ink.classList.add('is-animating');
+    });
