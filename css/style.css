@@ -603,7 +603,7 @@ box-shadow: -1.5px 5.8px 44.2px 3.8px rgba(0, 0, 0, 0.64);
 	position: absolute;
 	top: 55px;
 	right: 35px;
-	z-index: 0;
+	z-index: 400;
 }
 .controls{
 	position: absolute;

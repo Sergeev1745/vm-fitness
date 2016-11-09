@@ -33,6 +33,7 @@ $( document ).ready(function() {
 	
 });
      $('#next').click( function(){
+     	updateImages()
      	if($('#slider .active').next().hasClass("slide")){
      		$("#slider .active").hide().next().fadeIn(1000);
      	$("#slider .active").removeClass("active").next().addClass("active");
